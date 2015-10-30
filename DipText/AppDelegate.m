@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Product.h"
+#import "ProductSpec.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +19,46 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
+}
+
+
++ (instancetype)spec:(ProductSpec *)spec, ... NS_REQUIRES_NIL_TERMINATION
+{
+    va_list args;
+    va_start( args, spec );
+    NSMutableArray *mArray = [@[spec] mutableCopy];
+    for ( ;; )
+    {
+        id tempSpec = va_arg( args, id );
+        if (tempSpec == nil)
+            break;
+        [mArray addObject:tempSpec];
+    }
+    va_end( args );
+    AndSpec *andSpec = [[AndSpec alloc] init];
+    andSpec.specs = [mArray copy];
+    return andSpec;
+}
+- (BOOL)satisfy:(Product *)product
+{
+    for (ProductSpec *spec in _specs) {
+        if (![spec satisfy:product]) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+
+-(NSArray *)findProducts:(NSArray *)products bySpec:(ProductSpec *)spec
+{
+    NSMutableArray *list = [@[] mutableCopy];
+    for (Product *product in products) {
+        if ([spec satisfy:product]) {
+            [list addObject:product];
+        }
+    }
+    return list;
 }
 
 

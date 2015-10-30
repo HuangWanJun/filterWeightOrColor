@@ -17,6 +17,7 @@
 		A6786D451BE34BD200A9057C /* DipTextUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6786D441BE34BD200A9057C /* DipTextUITests.m */; };
 		A6786D541BE350C600A9057C /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = A6786D531BE350C600A9057C /* Product.m */; };
 		A6786D571BE3526A00A9057C /* ProductSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A6786D561BE3526A00A9057C /* ProductSpec.m */; };
+		A6786D5A1BE353D500A9057C /* ColorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A6786D591BE353D500A9057C /* ColorSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		A6786D531BE350C600A9057C /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		A6786D551BE3526A00A9057C /* ProductSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSpec.h; sourceTree = "<group>"; };
 		A6786D561BE3526A00A9057C /* ProductSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSpec.m; sourceTree = "<group>"; };
+		A6786D581BE353D500A9057C /* ColorSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpec.h; sourceTree = "<group>"; };
+		A6786D591BE353D500A9057C /* ColorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				A6786D531BE350C600A9057C /* Product.m */,
 				A6786D551BE3526A00A9057C /* ProductSpec.h */,
 				A6786D561BE3526A00A9057C /* ProductSpec.m */,
+				A6786D581BE353D500A9057C /* ColorSpec.h */,
+				A6786D591BE353D500A9057C /* ColorSpec.m */,
 			);
 			path = DipText;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			files = (
 				A6786D271BE34BD200A9057C /* ViewController.m in Sources */,
 				A6786D541BE350C600A9057C /* Product.m in Sources */,
+				A6786D5A1BE353D500A9057C /* ColorSpec.m in Sources */,
 				A6786D571BE3526A00A9057C /* ProductSpec.m in Sources */,
 				A6786D241BE34BD200A9057C /* AppDelegate.m in Sources */,
 				A6786D211BE34BD200A9057C /* main.m in Sources */,
