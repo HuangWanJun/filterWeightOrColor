@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Product.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +18,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
+}
+
+
+-(NSArray *) findAllRedProducts:(NSArray*)products{
+
+    NSMutableArray *list = [@[] mutableCopy];
+    for (Product *product in products ){
+        if ([product.color  isEqual: @"RED"]) {
+            [list addObject:product];
+        }
+    }
+    return list;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
